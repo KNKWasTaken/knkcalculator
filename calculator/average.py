@@ -1,8 +1,12 @@
+#Importing sys
+import sys
+
 #Creating Exit Function for Inavlid Data
 def invalid_exit():
 	invexit = input('Do You Want To Exit? (y/n)')
 	if invexit.lower() == 'y':
-		print(exit('Exiting...'))
+		print('Exiting...')
+		sys.exit(0)
 	elif invexit.lower() == 'n':
 		print('Continuing With Calculation...')
 	else:
@@ -29,8 +33,10 @@ while True:
 			invalid_exit()
 		else:
 			print('Average = ' + str(sum(l)/byd))
-			print(exit('Exiting...'))
+			print('Exiting...')
+			sys.exit(0)
 	elif v.lower() == 'e':
-		print(exit('Exiting...'))
+		print('Exiting...')
+		sys.exit(0)
 	else:
 		invalid_exit()
