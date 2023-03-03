@@ -1,3 +1,13 @@
+#Creating Exit Function for Inavlid Data
+def invalid_exit():
+	invexit = input('Do You Want To Exit? (y/n)')
+	if invexit.lower() == 'y':
+		print(exit('Exiting...'))
+	elif invexit.lower() == 'n':
+		print('Continuing With Calculation...')
+	else:
+		print('Invalid Data. Continuing With Calculation...')
+
 #Telling User How to Exit and Get Results
 print('Enter E to Exit')
 print('Enter R for Results')
@@ -16,17 +26,11 @@ while True:
 	elif v.lower() == 'r':
 		if byd == 0:
 			print('No Values Entered')
-			invalid_exit = input('Do You Want To Exit? (y/n): ')
-			if invalid_exit.lower() == 'y':
-				print(exit('Exiting...'))
-			elif invalid_exit.lower() == 'n':
-				print('Continuing with Calculation.')
-			else:
-				print('Invalid Value Entered. Continuing with Calculation.....')
+			invalid_exit()
 		else:
 			print('Average = ' + str(sum(l)/byd))
 			print(exit('Exiting...'))
 	elif v.lower() == 'e':
 		print(exit('Exiting...'))
 	else:
-		print('Invalid Argument...')
+		invalid_exit()
