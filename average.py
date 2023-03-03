@@ -8,14 +8,15 @@ l = list() #Creates Empty list
 byd = 0 #Create a Variable with value 0
 
 
-while l.isnum: #Checks if 
+while True:
 	v = input('Enter Number ' + str(byd + 1))
-	l.append(int(v))
-	byd += 1
-elif l.lowercase == 'r':
-	print('Average = ' str(sum(l)/byd))
-	print(exit('Exiting...'))
-elif l.lowercase == 'e':
-	print(exit('Exiting...'))
-else:
-	continue
+	if v.isnumeric():
+		l.append(int(v))
+		byd += 1
+	elif v.lower() == 'r':
+		print('Average = ' + str(sum(l)/byd))
+		print(exit('Exiting...'))
+	elif v.lower() == 'e':
+		print(exit('Exiting...'))
+	else:
+		continue
